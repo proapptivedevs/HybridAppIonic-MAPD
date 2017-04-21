@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 @Component({
   templateUrl: 'app.html'
 })
