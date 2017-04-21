@@ -22,8 +22,8 @@ export class ContactPage {
                 this.comments = af.database.list('/comments');
                 this.commentForm = this.formBuilder.group({
                       name: ['', Validators.required],
-                      comment: [''],
-                      email: [''],
+                      comment: ['', Validators.required],
+                      email: ['', Validators.required],
                       date: Date(),
                 });
               }
