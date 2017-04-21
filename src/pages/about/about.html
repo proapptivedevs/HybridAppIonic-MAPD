@@ -1,17 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Program Faculty
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-list-header>Assignment 4</ion-list-header>
-    <ion-item>Alias, Basil</ion-item>
-    <ion-item>Esquivel, Luis</ion-item>
-    <ion-item>Singh, Harpreet</ion-item>
-    <ion-item>Sandhu, Jaismeen</ion-item>
+    <ion-list>
+      <ion-list-header>
+       <h1>Semester 1</h1>
+    </ion-list-header>
+  
+    <ion-item class="text" *ngFor="let item of semester1 | async">
+      <h2>{{item['name']}}</h2>
+      <p>{{item['course']}}</p>
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+       <h1>Semester 2</h1>
+    </ion-list-header>
+    <ion-item class="text" *ngFor="let item of semester2 | async">
+      <h2>{{item['name']}}</h2>
+      <p>{{item['course']}}</p>
+     </ion-item> 
   </ion-list>
 </ion-content>

@@ -10,7 +10,7 @@
 
     <ion-list>
     <ion-item class="text" *ngFor="let overview of mapd | async" >
-      <h1>{{overview.$key}}</h1>
+      <h1 style="text-transform:capitalize">{{overview.$key}}</h1>
       <p>{{overview.$value}}</p>
     </ion-item>
   </ion-list>
