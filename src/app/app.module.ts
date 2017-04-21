@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
+import { Outline } from '../pages/outline/outline';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyA5CWgMD2EwmICVAOUDVg7rtfnONNyYKxA",
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    Outline
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ export const firebaseConfig = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    Outline
   ],
   providers: [
     StatusBar,

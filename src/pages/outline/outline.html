@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Outline page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Outline</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <h2>Outline</h2>
+
+
+    <ion-list>
+      <ion-list-header>
+       Semester 1
+    </ion-list-header>
+    <ion-item class="text" *ngFor="let item of semester1 | async" >
+      <h1>{{item['code']}}</h1>
+      <p>{{item['title']}}</p>
+      
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+       Semester 2
+    </ion-list-header>
+    <ion-item class="text" *ngFor="let item of semester2 | async" >
+      <h1>{{item['code']}}</h1>
+      <p>{{item['title']}}</p>
+      
+    </ion-item>
+  </ion-list>
+
+</ion-content>
