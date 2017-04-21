@@ -21,22 +21,24 @@
       <ion-list-header>
        Semester 1
     </ion-list-header>
-    <ion-item class="text" *ngFor="let item of semester1 | async" >
+    <a ion-item class="text" *ngFor="let item of semester1 | async"
+              (click)="goToOtherPage(item.code, item.title, item.description, item.hours)" >
       <h1>{{item['code']}}</h1>
       <p>{{item['title']}}</p>
       
-    </ion-item>
+    </a>
   </ion-list>
 
     <ion-list>
       <ion-list-header>
        Semester 2
     </ion-list-header>
-    <ion-item class="text" *ngFor="let item of semester2 | async" >
+    <a ion-item class="text" *ngFor="let item of semester2 | async"
+              (click)="goToOtherPage(item.code, item.title, item.description, item.hours)" >
       <h1>{{item['code']}}</h1>
       <p>{{item['title']}}</p>
       
-    </ion-item>
+    </a>
   </ion-list>
 
 </ion-content>

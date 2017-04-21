@@ -14,6 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { Outline } from '../pages/outline/outline';
 
+import { Course } from '../pages/course/course';
+
 export const firebaseConfig = {
     apiKey: "AIzaSyA5CWgMD2EwmICVAOUDVg7rtfnONNyYKxA",
     authDomain: "mapd122-assignment4.firebaseapp.com",
@@ -30,7 +32,8 @@ export const firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    Outline
+    Outline,
+    Course
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ export const firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    Outline
+    Outline,
+    Course
   ],
   providers: [
     StatusBar,
