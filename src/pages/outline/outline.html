@@ -7,23 +7,20 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Outline</ion-title>
+    <ion-title>Courses</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
 
-  <h2>Outline</h2>
-
-
     <ion-list>
       <ion-list-header>
-       Semester 1
+       <h1>Semester 1</h1>
     </ion-list-header>
     <a ion-item class="text" *ngFor="let item of semester1 | async"
               (click)="goToOtherPage(item.code, item.title, item.description, item.hours)" >
-      <h1>{{item['code']}}</h1>
+      <h2>{{item['code']}}</h2>
       <p>{{item['title']}}</p>
       
     </a>
@@ -31,11 +28,11 @@
 
     <ion-list>
       <ion-list-header>
-       Semester 2
+       <h1>Semester 2</h1>
     </ion-list-header>
     <a ion-item class="text" *ngFor="let item of semester2 | async"
               (click)="goToOtherPage(item.code, item.title, item.description, item.hours)" >
-      <h1>{{item['code']}}</h1>
+      <h2>{{item['code']}}</h2>
       <p>{{item['title']}}</p>
       
     </a>
