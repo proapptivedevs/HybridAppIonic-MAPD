@@ -8,7 +8,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   templateUrl: 'about.html'
 })
 export class AboutPage {
- semester1: FirebaseListObservable<any[]>;
+  semester1: FirebaseListObservable<any[]>;
   semester2: FirebaseListObservable<any[]>;
   
   constructor(public navCtrl: NavController,

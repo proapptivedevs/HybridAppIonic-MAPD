@@ -4,6 +4,7 @@
       Program Faculty
     </ion-title>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
@@ -11,7 +12,7 @@
       <ion-list-header color="dark">
        <h1 style="font-size:2.5em;text-align:center;text-transform:capitalize;"><b>Semester 1</b></h1>
     </ion-list-header>
-  
+
     <ion-card class="text" *ngFor="let item of semester1 | async">
       <h1 style="margin:10px"><b>{{item['name']}}</b></h1>
       <p style="padding:5px"><b>Course : </b>{{item['course']}}</p>
