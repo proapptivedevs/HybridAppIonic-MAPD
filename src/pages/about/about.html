@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="dark">
     <ion-title>
       Program Faculty
     </ion-title>
@@ -7,24 +7,26 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-      <ion-list-header>
-       <h1>Semester 1</h1>
+    <ion-list color="light">
+      <ion-list-header color="dark">
+       <h1 style="font-size:2.5em;text-align:center;text-transform:capitalize;"><b>Semester 1</b></h1>
     </ion-list-header>
   
-    <ion-item class="text" *ngFor="let item of semester1 | async">
-      <h2>{{item['name']}}</h2>
-      <p>{{item['course']}}</p>
-    </ion-item>
+    <ion-card class="text" *ngFor="let item of semester1 | async">
+      <h1 style="margin:10px"><b>{{item['name']}}</b></h1>
+      <p style="padding:5px"><b>Course : </b>{{item['course']}}</p>
+      <p style="padding:5px"><b>Email : </b> {{item['email']}}</p>
+    </ion-card>
   </ion-list>
 
-    <ion-list>
+    <ion-list color="light">
       <ion-list-header>
-       <h1>Semester 2</h1>
+        <h1 style="font-size:2.5em;text-align:center;text-transform:capitalize"><b>Semester 2</b></h1>
     </ion-list-header>
-    <ion-item class="text" *ngFor="let item of semester2 | async">
-      <h2>{{item['name']}}</h2>
-      <p>{{item['course']}}</p>
-     </ion-item> 
+    <ion-card class="text" *ngFor="let item of semester2 | async" color="light">
+      <h1 style="margin:10px"><b>{{item['name']}}</b></h1>
+      <p style="padding:5px"><b>Course : </b>{{item['course']}}</p>
+      <p style="padding:5px"><b>Email :</b> {{item['email']}}</p>
+     </ion-card> 
   </ion-list>
 </ion-content>

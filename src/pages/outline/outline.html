@@ -16,24 +16,24 @@
 
     <ion-list>
       <ion-list-header>
-       <h1>Semester 1</h1>
+        <h1 style="font-size:2.5em;text-align:center;text-transform:capitalize"><b>Semester 1</b></h1>
     </ion-list-header>
     <a ion-item class="text" *ngFor="let item of semester1 | async"
               (click)="goToOtherPage(item.code, item.title, item.description, item.hours)" >
-      <h2>{{item['code']}}</h2>
-      <p>{{item['title']}}</p>
+      <h2 style="margin:10px"><b>{{item['code']}}</b></h2>
+      <p style="margin:5px"><b>{{item['title']}}</b></p>
       
     </a>
   </ion-list>
 
     <ion-list>
       <ion-list-header>
-       <h1>Semester 2</h1>
+        <h1 style="font-size:2.5em;text-align:center;text-transform:capitalize"><b>Semester 2</b></h1>
     </ion-list-header>
     <a ion-item class="text" *ngFor="let item of semester2 | async"
               (click)="goToOtherPage(item.code, item.title, item.description, item.hours)" >
-      <h2>{{item['code']}}</h2>
-      <p>{{item['title']}}</p>
+      <h2 style="margin:10px"><b>{{item['code']}}</b></h2>
+      <p style="margin:5px"><b>{{item['title']}}</b></p>
       
     </a>
   </ion-list>
