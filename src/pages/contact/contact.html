@@ -1,40 +1,48 @@
 <ion-header>
   <ion-navbar color="dark">
     <ion-title>
-      Contact
+      Contact Us
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list color="light">
-    <ion-list-header>Email directory</ion-list-header>
-
-      <ion-item>bthazha1@my.centennialcollege.ca</ion-item>
-      <ion-item>lesquive@my.centennialcollege.ca</ion-item>
-      <ion-item>hsing651@my.centennialcollege.ca</ion-item>
-      <ion-item>jsandh44@my.centennialcollege.ca</ion-item>
+      <ion-item>
+        <h1>General Enquiries</h1>
+        <h2><b>Phone Number: 416-289-5000<br>
+            Toll free in Ontario: 1-800-268-4419</b></h2>
+      </ion-item>
+      <ion-item>
+        <h1>Canadian Students</h1>
+        <h2><b>Phone Number: 416-289-5300<br>
+            Email: admissions@centennialcollege.ca</b></h2>
+      </ion-item>
+      <ion-item>
+        <h1>International Students</h1>
+        <h2><b>Phone Number: 001-416-289-5393<br>
+            Email: international@centennialcollege.ca</b></h2>
+      </ion-item>
     
   </ion-list>
-  <h1>Comments</h1>
-    <form [formGroup]="commentForm" (ngSubmit)="newComment()">
+  <h1 style="text-align:center;">Please provide your Valuable Feedback</h1>
+    <form style="text-align:center;margin:0 10% 2% 10%;border: 1px solid #ccc;" [formGroup]="commentForm" (ngSubmit)="newComment()">
       <ion-item>
-        <ion-label>Name</ion-label>
-        <ion-input type="text" formControlName="name"></ion-input>
+        <ion-input placeholder="Full Name" type="text" formControlName="name"></ion-input>
       </ion-item>
        <ion-item>
-        <ion-label>Email</ion-label>
-        <ion-input type="text" formControlName="email"></ion-input>
-      </ion-item>     <ion-item>
-        <ion-label>Comment</ion-label>
-        <ion-textarea formControlName="comment"></ion-textarea>
+        <ion-input  placeholder="Email" type="text" formControlName="email"></ion-input>
+      </ion-item>    
+      <ion-item>
+        <ion-textarea placeholder="Feedback" formControlName="comment"></ion-textarea>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!commentForm.valid" color="blue">Submit</button>
+      <button style="text-align:center;" ion-button type="submit" [disabled]="!commentForm.valid" color="blue">Submit</button>
     </form>
 
-    <ion-list>
+    <ion-list style="margin:0 10% 1% 10%;border: 1px solid #ccc;" >
       <ion-item class="text" *ngFor="let item of comments | async" color="light" >
         <h1>{{item['name']}}</h1>
+        <p>{{item['email']}}</p>
         <p>{{item['comment']}}</p>
       </ion-item>
     </ion-list>
