@@ -14,12 +14,14 @@ export class ContactPage {
   comments: FirebaseListObservable<any[]>;
 
   private commentForm : FormGroup;
+  
 
   constructor(public navCtrl: NavController,
               af: AngularFire,
               private formBuilder: FormBuilder ) {
 
                 this.comments = af.database.list('/comments');
+                
                 this.commentForm = this.formBuilder.group({
                       name: ['', Validators.required],
                       comment: ['', Validators.required],
